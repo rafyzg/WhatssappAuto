@@ -1,0 +1,29 @@
+{
+  "name": "whatssappauto",
+  "version": "1.0.0",
+  "description": "Whatssapp Integration with puppeteer & rabbot",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index-test.js",
+    "dev": "nodemon index-test.js"
+  },
+  "keywords": [
+    "Whatssapp",
+    "puppeteer",
+    "rabbitmq"
+  ],
+  "author": "RafYzg",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.8",
+    "puppeteer": "^1.8.0",
+    "rabbot": "^2.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
