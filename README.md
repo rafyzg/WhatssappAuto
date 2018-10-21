@@ -18,14 +18,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Prerequisites
-
 There are couple of things to need to install before running the application
 
 **Express**
