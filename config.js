@@ -17,4 +17,4 @@ module.exports = function(rabbit) {
         console.log(err.stack);
         process.exit(1);
     });
-};
+}; 
