@@ -276,19 +276,3 @@ class WhatssappAuto {
 
 module.exports = WhatssappAuto;
 
-/*var who = new WhatssappAuto(false);
-who.blockPerson("זוהר הגבר").then((callback) => { 
-    if(callback == true) {
-        console.log("success");
-        who.sendMessage("ניסיון", ":wink::dog:");
-        who.close();
-    }
-    else {
-        console.log("error");
-    }
-});
-*/
-
-//var users = ["זוהר ה"];
-//who.createGroup(users,"test");
-//who.sendMessage("ניסיון", ":wink::dog:");
