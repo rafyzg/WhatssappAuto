@@ -1,8 +1,8 @@
 const mongoClient = require('mongodb').MongoClient;
-const mPort = 27017;
-const dbName = "WhatssappWeb";
+const mPort = 27017; //Mongo port
+const dbName = "WhatssappWeb"; //Database name
 var url = "mongodb://localhost:" + mPort + "/";
-var db = null;
+var db = null; 
 
 
 mongoClient.connect('mongodb://localhost:27017/', function(err, client) {
@@ -13,6 +13,10 @@ mongoClient.connect('mongodb://localhost:27017/', function(err, client) {
     db = client.db(dbName);
 });
 
+/*
+Function for inserting the message to the Database, inserts the ip of the sender, receiver name, 
+message tex and Date.
+*/
 exports.insertMessage = function(ip, name, text) {
 
     if(db != null) {
@@ -29,7 +33,10 @@ exports.insertMessage = function(ip, name, text) {
     }
 
 }
-
+/*
+Function for inserting the block to the databse - inserts the Ip of the blocker,
+the blocked person and Date.
+*/
 exports.insertBlock = function(ip, blocked) {
 
     if(db != null) {
@@ -47,6 +54,10 @@ exports.insertBlock = function(ip, blocked) {
 
 }
 
+/*
+function for inserting a group to the databse. 
+Insertes the ip of the group creator, members, title and Date.
+*/
 exports.insertGroup = function(ip, members, title) {
 
     if(db != null) {
@@ -60,16 +71,4 @@ exports.insertGroup = function(ip, members, title) {
         });
     }
 
-}
-
-
-exports.connectDB = function() {
-    mongoClient.connect('mongodb://localhost:27017/', function(err, client) {
-        if(err) { console.error(err) }
-        else {
-            console.log("Connected successfully to DB");
-        }
-        db = client.db(dbName);
-        return true;
-    });
 }
