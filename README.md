@@ -75,7 +75,7 @@ Your body post request should have a 'users' array passed
 
 ## Authors
 
-* **Rafael Yzgeav** - *Initial work* - [RafYzg](https://github.com/RafYzg)
+* **Rafael Yzgeav** - *Prime work* - [RafYzg](https://github.com/RafYzg)
 
 
 ## License
