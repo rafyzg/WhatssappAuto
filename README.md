@@ -14,7 +14,7 @@ Rabitmq server listens to the messages and executes using puppeteer.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
@@ -49,40 +49,21 @@ The Second is - "receive.js" - which is ressposible for receiving the message, e
 
 ## Url Explained
 
-I used postman for this kind of post requests.
-
--For Sending a message: 
+For Sending a message: 
 ```
 http://localhost:1337/message/{Contact-Name}
 Your body post request should have 'text' with the message content
 ```
 
--For blocking a person
+For blocking a person
 ```
 http://localhost:1337/block/{Contact-Name}
 ```
 
--For Creating a new group
+For Creating a new group
 ```
 http://localhost:1337/message/{Group-Title}
 Your body post request should have a 'users' array passed
-```
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
 ```
 
 ## Built With
@@ -92,26 +73,12 @@ Give an example
 * [Rabbot](https://github.com/arobson/rabbot) - Used to pass message from Express to Puppeteer
 * [MongoDB](https://github.com/mongodb/node-mongodb-native) - Used log all the functions
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
 * **Rafael Yzgeav** - *Initial work* - [RafYzg](https://github.com/RafYzg)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License.
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
