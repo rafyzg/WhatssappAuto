@@ -19,28 +19,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 There are couple of things to need to install before running the application
-
-**Express**
-
 ```
-npm install express
-```
-
-**Mongodb**
-
-```
-npm install mongodb --save
-```
-
-**Puppeteer**
-
-```
-npm i puppeteer
-```
-
-**Body-parser**
-```
-npm install body-parser
+npm install
 ```
 
 Basically there are 2 main files you are going to use. 
@@ -51,19 +31,30 @@ The Second is - "receive.js" - which is ressposible for receiving the message, e
 
 For Sending a message: 
 ```
-http://localhost:1337/message/{Contact-Name}
+POST: http://localhost:1337/message/{Contact-Name}
 Your body post request should have 'text' with the message content
 ```
+-Example 
+```
+POST: message/john
+HOST: http://localhost:1337/
+Body: {
+        text : Please bring milk on the way home (:
+       }
 
+```
 For blocking a person
 ```
-http://localhost:1337/block/{Contact-Name}
+POST: http://localhost:1337/block/{Contact-Name}
 ```
 
 For Creating a new group
 ```
-http://localhost:1337/message/{Group-Title}
+POST: http://localhost:1337/message/{Group-Title}
 Your body post request should have a 'users' array passed
+{
+  users=["John", "Dina", "Yuval"]
+}
 ```
 
 ## Built With
