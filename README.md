@@ -34,15 +34,14 @@ For Sending a message:
 POST: http://localhost:1337/message/{Contact-Name}
 Your body post request should have 'text' with the message content
 ```
-        Example 
-           ```
-                POST: message/john
-                HOST: http://localhost:1337/
-                Body: {
-                        text : Please bring milk on the way home (:
-                }
+   Example 
+       ```
+        POST: message/john
+        HOST: http://localhost:1337/
+        Body: {
+                text : Please bring milk on the way home (:
+        } ```
 
-           ```
 For blocking a person
 ```
 POST: http://localhost:1337/block/{Contact-Name}
