@@ -97,10 +97,10 @@ class WhatssappAuto {
     async selectUserGroup(users) {
         try {
             for(let user of users) {
-            await this.page.focus("input");
-            await this.page.type("input", user , { delay: 150 });
-            await this.page.click("div[style='z-index: 0; height: 72px; transform: translateY(0px);']");
-            await this.page.waitFor(500);
+                await this.page.focus("input");
+                await this.page.type("input", user , { delay: 150 });
+                await this.page.click("div[style='z-index: 0; height: 72px; transform: translateY(0px);']");
+                await this.page.waitFor(500);
             }
             return true;
         } catch(error) {
