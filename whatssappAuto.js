@@ -13,7 +13,7 @@ class WhatssappAuto {
         this.browser = null;
         this.page = null;
         this.headless = headless;
-        this.userDataDir = "C:\Users\Home\AppData\Local\Google\Chrome\User Data";
+        this.userDataDir = 'C:\Users\Home\AppData\Local\Google\Chrome\User Data';
     }
 
     /**
@@ -28,8 +28,8 @@ class WhatssappAuto {
                 args: ["--disable-dev-shm-usage"], //To avoid unnecessary issues
             });
             this.page = await this.browser.newPage();
-            await this.page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0");
-            await this.page.goto('https://web.whatsapp.com', {waitUntil: "domcontentloaded"});
+            await this.page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0');
+            await this.page.goto('https://web.whatsapp.com', {waitUntil: 'domcontentloaded'});
             return true;
         } catch(error) {
             console.log("Failed to launch browser", error);

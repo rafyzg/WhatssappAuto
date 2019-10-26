@@ -55,8 +55,8 @@ rabbit.handle({queue: "whatssapp.q"}, (data) => {//Handling the whatssapp Queue
 
 });
 
-
-require('./config')(rabbit) //Connecting the rabbitmq server
+//Connecting the rabbitmq server
+require('./config')(rabbit) 
   .then(() => {
       console.log("logged successfully");
 

@@ -1,11 +1,11 @@
 const mongoClient = require('mongodb').MongoClient;
 const mPort = 27017; //Mongo port
 const dbName = "WhatssappWeb"; //Database name
-var url = "mongodb://localhost:" + mPort + "/";
-var db = null; 
+let url = `mongodb://localhost:+ ${mPort}/`;
+let db = null; 
 
-
-mongoClient.connect('mongodb://localhost:27017/', function(err, client) {
+//Setup database connection
+mongoClient.connect(`mongodb://localhost:${mPost}/`, function(err, client) {
     if(err) { console.error(err) }
     else {
         console.log("Connected successfully to DB");
@@ -17,7 +17,7 @@ mongoClient.connect('mongodb://localhost:27017/', function(err, client) {
 Function for inserting the message to the Database, inserts the ip of the sender, receiver name, 
 message tex and Date.
 */
-exports.insertMessage = function(ip, name, text) {
+const insertMessage = (ip, name, text) => {
 
     if(db != null) {
         var obj = { sender: ip, receiver: name, text: text, date: new Date(Date.now()) , readDate: null };
@@ -37,7 +37,7 @@ exports.insertMessage = function(ip, name, text) {
 Function for inserting the block to the databse - inserts the Ip of the blocker,
 the blocked person and Date.
 */
-exports.insertBlock = function(ip, blocked) {
+const insertBlock = (ip, blocked) => {
 
     if(db != null) {
         var obj = { userIp: ip, receiver: blocked, date: new Date(Date.now())};
@@ -49,7 +49,7 @@ exports.insertBlock = function(ip, blocked) {
             }
 
             
-        });
+            function});
     }
 
 }
@@ -58,7 +58,7 @@ exports.insertBlock = function(ip, blocked) {
 function for inserting a group to the databse. 
 Insertes the ip of the group creator, members, title and Date.
 */
-exports.insertGroup = function(ip, members, title) {
+const insertGroup = (ip, members, title) => {
 
     if(db != null) {
         var obj = { userIp: ip, members: members, title: title , date: new Date(Date.now())};
@@ -72,3 +72,9 @@ exports.insertGroup = function(ip, members, title) {
     }
 
 }
+
+moudle.export = {
+    insertMessage,
+    insertBlock,
+    insertGroup
+};
